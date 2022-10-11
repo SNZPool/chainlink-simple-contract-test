@@ -17,7 +17,7 @@ RPC_URL="https://goerli.infura.io/v3/<>"
 
 # the feed contract address on your target chain
 # here is a sample contract address on goerli testnet
-CONTRACT_ADDR="0x1e23989885Db1463F3BB857f7c20992F7B4BC343"
+CONTRACT_ADDR="0x84713Bcc6aeE40B908B0AD3E946ceC80278E87F1"
 
 # transmitter's private key
 # please comfirm this address have been added in feed contract's "transmitter" and have enough gas

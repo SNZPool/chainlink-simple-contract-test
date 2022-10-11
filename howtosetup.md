@@ -9,8 +9,9 @@ npm install --save ethers
 npm install --save dotenv
 
 node --no-experimental-fetch index.js
-```
 
+git push -u origin main
+```
 
 
 Chinese Reference:
