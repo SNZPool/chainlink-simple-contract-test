@@ -56,7 +56,7 @@ requestPrice(RPICE_URL)
 .then(function(amountStr){
     contract.methods.transmit(ethers.utils.parseUnits(amountStr, 18))
         .send({
-            from: '0x1e23989885Db1463F3BB857f7c20992F7B4BC343',
+            from: CONTRACT_ADDR,
             gasLimit: 80000
         })
         .on('receipt', function(receipt){
