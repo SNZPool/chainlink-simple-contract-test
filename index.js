@@ -25,7 +25,7 @@ var abi = parsed.abi;
 var web3 = new Web3();
 web3.setProvider(new Web3.providers.HttpProvider(RPC_URL));
 web3.eth.accounts.wallet.add(PRI_KEY)
-var contract = new web3.eth.Contract(abi, PUB_ADDR);
+var contract = new web3.eth.Contract(abi, CONTRACT_ADDR);
 
 const requestPrice = url => {
     return new Promise((resolve, reject) => {
@@ -56,7 +56,7 @@ requestPrice(RPICE_URL)
 .then(function(amountStr){
     contract.methods.transmit(ethers.utils.parseUnits(amountStr, 18))
         .send({
-            from: CONTRACT_ADDR,
+            from: PUB_ADDR,
             gasLimit: 80000
         })
         .on('receipt', function(receipt){
